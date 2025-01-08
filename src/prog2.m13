@@ -1,0 +1,57 @@
+#*Prog2*#
+STARTPROGRAM 
+VARIABLE INT_4  _aaaaaaaa, _bbbbbbbb, _cccccccc;
+STARTBLOK
+READ  _aaaaaaaa;
+READ  _bbbbbbbb;
+READ  _cccccccc;
+IF( _aaaaaaaa GT  _bbbbbbbb)
+STARTBLOK
+	IF( _aaaaaaaa GT  _cccccccc)
+	STARTBLOK
+		GOTO Abigger;		
+	ENDBLOK
+	ELSE
+	STARTBLOK
+		WRITE  _cccccccc;
+		GOTO OutofIF;
+		Abigger:		
+		WRITE  _aaaaaaaa;
+		GOTO OutofIF;
+	ENDBLOK
+ENDBLOK	
+IF( _bbbbbbbb LT  _cccccccc)
+STARTBLOK
+	WRITE  _cccccccc;
+ENDBLOK	
+ELSE
+STARTBLOK
+	WRITE  _bbbbbbbb;
+ENDBLOK
+OutofIF:	
+
+IF(( _aaaaaaaa EQ  _bbbbbbbb) & ( _aaaaaaaa EQ  _cccccccc) & ( _bbbbbbbb EQ  _cccccccc))
+STARTBLOK
+	WRITE 1;
+ENDBLOK	
+ELSE
+STARTBLOK
+	WRITE 0;
+ENDBLOK
+IF(( _aaaaaaaa LT 0) | ( _bbbbbbbb LT 0) | ( _cccccccc LT 0))
+STARTBLOK
+	WRITE -1;
+ENDBLOK	
+ELSE
+STARTBLOK
+	WRITE 0;
+ENDBLOK
+IF(!( _aaaaaaaa LT ( _bbbbbbbb ADD  _cccccccc)))
+STARTBLOK
+	WRITE(10);
+ENDBLOK	
+ELSE
+STARTBLOK
+	WRITE(0);
+ENDBLOK
+ENDBLOK
