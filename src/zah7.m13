@@ -1,0 +1,11 @@
+STARTPROGRAM
+VARIABLE INT_4 _aaaaaaa, _bbbbbbb;
+STARTBLOK
+READ _aaaaaaa
+READ _bbbbbbb
+  WHILE _aaaaaaa LT 1 
+    _aaaaaaa <== _aaaaaaa SUB 1
+  IF (_aaaaaaa GT  _bbbbbbb) EXIT WHILE
+    WRITE _aaaaaaa
+  END
+ENDBLOK

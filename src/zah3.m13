@@ -1,0 +1,9 @@
+STARTPROGRAM
+VARIABLE INT_4 _bbbbbbb , _ddddddd , _eeeeeee , _kkkkkkk ;
+STARTBLOK
+  _kkkkkkk <== 25630
+  READ  _bbbbbbb 
+  READ   _ddddddd 
+  READ  _eeeeeee 
+  WRITE ( _kkkkkkk ADD _bbbbbbb SUB _ddddddd DIV 2 ADD _eeeeeee MUL 4 )
+ENDBLOK

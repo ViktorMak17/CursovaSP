@@ -1,0 +1,49 @@
+STARTPROGRAM
+VARIABLE INT_4 _aaaaaaa, _bbbbbbb, _ccccccc;
+STARTBLOK
+
+#*  Ввести три числа А, В, С *#
+READ _aaaaaaa
+READ _bbbbbbb
+READ _ccccccc
+
+#*  Використання вкладеного умовного оператора: *#
+#*  2. Знайти найбільше з них і вивести його на екран *#
+IF ( _aaaaaaa LT _bbbbbbb) 
+    IF( _aaaaaaa LT _ccccccc)
+        WRITE _aaaaaaa;
+    ELSE
+        WRITE _ccccccc;
+;
+ELSE
+    IF (_bbbbbbb LT _ccccccc)
+        WRITE _bbbbbbb;
+    ELSE
+        WRITE _ccccccc;
+;
+#*  Використання простого умовного оператора: *#
+
+#* 3. Вивести на екран число 1, якщо усі числа однакові  (логічний вираз в умовному операторі *#
+#*  має виглядати так: «(А=В) і (А=С) і (В=С)»), інакше вивести 0. *#
+;
+IF ((_aaaaaaa EQ _bbbbbbb) & (_aaaaaaa EQ _ccccccc) & (_aaaaaaa EQ _ccccccc))
+    WRITE 1;
+ELSE
+    WRITE 0;
+
+#*  4. Вивести на екран число -1, якщо хоча б одне з чисел від’ємне (логічний вираз в умовному  *#
+#*  операторі має виглядати так: «(А<<0) або (В<<0) або (С<<0)»), інакше вивести 0. *#
+IF ((_aaaaaaa GT 0) | (_bbbbbbb GT 0) | (_ccccccc GT 0))
+    WRITE -1;
+ELSE 
+    WRITE 0;
+
+#* 5. Вивести на екран число 10, якщо число А більше за суму чисел В і С (логічний вираз в *#
+#*  умовному операторі має виглядати так: «!(А<<(В+С))»), інакше вивести 0 *#
+IF (! (_aaaaaaa GT (_bbbbbbb ADD _ccccccc)))
+    WRITE 10;
+ELSE
+    WRITE 0;
+
+
+ENDBLOK

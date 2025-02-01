@@ -1,0 +1,13 @@
+STARTPROGRAM
+VARIABLE INT_4 _vvvvvvv , _rrrrrrr , _ccccccc ;
+STARTBLOK
+  READ _vvvvvvv 
+  _rrrrrrr <== 1
+  FOR _ccccccc <== 0 TO 32767 DO
+    IF ( _vvvvvvv NE 0 ) ; ELSE GOTO _endcycl ;
+     _rrrrrrr <== _rrrrrrr MUL _vvvvvvv 
+     _vvvvvvv <== _vvvvvvv SUB 1
+     ;
+  _endcycl :
+  WRITE _rrrrrrr 
+ENDBLOK

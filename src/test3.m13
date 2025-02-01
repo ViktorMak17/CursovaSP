@@ -1,0 +1,31 @@
+#* Тестова програма «Циклічний алгоритм» *#
+STARTPROGRAM
+VARIABLE INT_4 _aaaaaaa, _bbbbbbb, _xxxxxxx, _iiiiiii, _jjjjjjj;
+STARTBLOK
+
+
+#*  1. Ввести два числа А і В, причому А<В *#
+READ _aaaaaaa
+READ _bbbbbbb
+
+#*  Використання простого оператора циклу: *#
+
+#*  2. Вивести на екран квадрати чисел від А до В включно. *#
+FOR _xxxxxxx <== _aaaaaaa TO _bbbbbbb DO
+    WRITE _xxxxxxx MUL _xxxxxxx
+	;
+
+#*  Використання вкладеного оператора циклу: *#
+
+#*  3. Обрахувати Х=А*В за наступним алгоритмом:... *#
+_xxxxxxx <== 0
+FOR _iiiiiii <== 1 TO _aaaaaaa DO
+    FOR _jjjjjjj <== 1 TO _bbbbbbb DO 
+        _xxxxxxx <== _xxxxxxx ADD 1
+; 
+;
+
+#*  4. Вивести значення Х на екран *#
+WRITE _xxxxxxx
+
+ENDBLOK

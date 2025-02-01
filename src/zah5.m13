@@ -1,0 +1,9 @@
+STARTPROGRAM
+VARIABLE INT_4 _aaaaaaa;
+STARTBLOK
+ READ _aaaaaaa
+  REPEAT
+    _aaaaaaa <== _aaaaaaa SUB 1
+    WRITE  _aaaaaaa
+  UNTIL ( _aaaaaaa GT 1 )
+ENDBLOK

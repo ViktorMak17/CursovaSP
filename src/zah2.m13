@@ -1,0 +1,27 @@
+STARTPROGRAM
+VARIABLE INT_4 _vvvvvvv , _ddddddd , _rrrrrrr , _cccccca , _ccccccb, _ccccccc ;
+STARTBLOK
+  READ _vvvvvvv 
+  _vvvvvvv <== _vvvvvvv ADD 1
+  FOR _cccccca <== 0 TO 32767 DO
+    _ddddddd <== _vvvvvvv SUB 1
+   FOR _ccccccb <== 0 TO 32767 DO 
+      IF ( _ddddddd GT 2 | _ddddddd EQ 2 );
+   ELSE GOTO _ggggggb;
+      _rrrrrrr <== _vvvvvvv 
+      FOR _ccccccc <== 0 TO 32767 DO
+        IF ( _rrrrrrr GT _ddddddd | _rrrrrrr EQ _ddddddd );
+     ELSE GOTO _ggggggc;
+        _rrrrrrr <== _rrrrrrr SUB _ddddddd
+        ;
+      _ggggggc:
+      IF ( _rrrrrrr EQ 0 ) GOTO _ggggggb;
+      _ddddddd <== _ddddddd SUB 1
+    ;
+    _ggggggb:
+    IF ( _ddddddd EQ 1 ) GOTO _gggggga;
+    _vvvvvvv <== _vvvvvvv ADD 1
+ ;
+  _gggggga:
+  WRITE _vvvvvvv 
+ENDBLOK

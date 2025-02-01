@@ -1,0 +1,19 @@
+STARTPROGRAM
+VARIABLE INT_4 _aaaaaaa, _bbbbbbb, _xxxxxxx, _yyyyyyy;
+STARTBLOK
+READ _aaaaaaa
+READ _bbbbbbb
+
+WRITE  _aaaaaaa ADD _bbbbbbb
+WRITE  _aaaaaaa SUB _bbbbbbb
+WRITE  _aaaaaaa MUL _bbbbbbb
+WRITE  _aaaaaaa DIV _bbbbbbb
+WRITE  _aaaaaaa MOD _bbbbbbb
+
+_xxxxxxx <== (_aaaaaaa SUB _bbbbbbb) MUL 10 ADD (_aaaaaaa ADD _bbbbbbb) DIV 10
+_yyyyyyy <== _xxxxxxx ADD _xxxxxxx MOD 10 
+
+WRITE _xxxxxxx
+WRITE _yyyyyyy
+
+ENDBLOK
